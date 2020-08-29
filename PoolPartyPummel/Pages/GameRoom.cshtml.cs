@@ -9,9 +9,12 @@ namespace PoolPartyPummel
 {
     public class GameRoomModel : PageModel
     {
-        public void OnGet()
+        public string joinCode { get; set; }
+        public string name { get; set; }
+        public void OnGet(string joinCode, string name)
         {
-
+            this.joinCode = joinCode;
+            this.name = name;
         }
     }
 }

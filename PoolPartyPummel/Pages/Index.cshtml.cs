@@ -12,6 +12,8 @@ namespace PoolPartyPummel.Pages
     {
         [BindProperty]
         public string connectionGuid { get; set; }
+        [BindProperty]
+        public string username { get; set; }
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -19,9 +21,9 @@ namespace PoolPartyPummel.Pages
             _logger = logger;
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
-
+            return RedirectToPage("GameRoom", new { joinCode = connectionGuid, name = username });
         }
     }
 }

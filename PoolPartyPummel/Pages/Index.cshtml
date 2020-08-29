@@ -10,11 +10,11 @@
 <div id="connectToGroup">
     <div class="input-group justify-content-md-center btn-group-sm" style="margin-top:5%">
         <form method="post">
-            <input type="search" asp-for="connectionGuid" style="width:400px" class="form-control" placeholder="Nautical Username"/>
+            <input type="search" asp-for="username" id ="username" style="width:400px" class="form-control" placeholder="Nautical Username"/>
             <br />
-            <input type="search" asp-for="connectionGuid" style="width:400px" class="form-control" placeholder="Tubular Join Code"/>
+            <input type="search" asp-for="connectionGuid" style="width:400px" class="form-control" placeholder="Tubular Join Code" id="joinCode"/>
             <br />
-            <button type="submit" class="btn btn-dark form-control">Join!</button>
+            <button type="submit" class="btn btn-dark form-control" id="joinGame">Join!</button>
         </form>
     </div>
 </div>

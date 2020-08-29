@@ -15,6 +15,7 @@ namespace PoolPartyPummel
                 id = Guid.NewGuid().ToString().Split('-')[0];
             }
             string name = Context.ConnectionId;
+            Console.WriteLine(userName + ", " + id);
             await Groups.AddToGroupAsync(name, id);
             await Clients.Group(id).SendAsync("newUser", userName);
         }

@@ -4,5 +4,6 @@
     ViewData["Title"] = "GameRoom";
 }
 
-<h1>GameRoom</h1>
-
+<div onclick="join('@Model.joinCode','@Model.name')" id="joiner"></div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/gameHub.js"></script>
