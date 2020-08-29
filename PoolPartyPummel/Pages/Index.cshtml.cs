@@ -10,6 +10,8 @@ namespace PoolPartyPummel.Pages
 {
     public class IndexModel : PageModel
     {
+        [BindProperty]
+        public string connectionGuid { get; set; }
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -17,7 +19,7 @@ namespace PoolPartyPummel.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnPost()
         {
 
         }

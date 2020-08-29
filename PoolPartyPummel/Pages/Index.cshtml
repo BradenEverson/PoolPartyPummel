@@ -5,5 +5,16 @@
 }
 
 <div class="text-center">
-    <img src="~/Images/logo.png" />
+    <img src="~/Images/logo.png" width="75%" height="25%"/>
+</div>
+<div id="connectToGroup">
+    <div class="input-group justify-content-md-center btn-group-sm" style="margin-top:5%">
+        <form method="post">
+            <input type="search" asp-for="connectionGuid" style="width:400px" class="form-control" placeholder="Nautical Username"/>
+            <br />
+            <input type="search" asp-for="connectionGuid" style="width:400px" class="form-control" placeholder="Tubular Join Code"/>
+            <br />
+            <button type="submit" class="btn btn-dark form-control">Join!</button>
+        </form>
+    </div>
 </div>
