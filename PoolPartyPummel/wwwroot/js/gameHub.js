@@ -1,6 +1,7 @@
 ﻿var connection = new signalR.HubConnectionBuilder().withUrl("./GameHub").build();
 
- function join(joinCode, userName) {
+function join(joinCode, userName) {
+    document.getElementById("splashAudio").play();
     connection.invoke("joinGroup", userName, joinCode).catch(function (err) {
         return console.error(err);
     });
@@ -12,4 +13,3 @@ connection.start().then(function () {
 }).catch(function (err) {
     return console.error(err);
 });
-

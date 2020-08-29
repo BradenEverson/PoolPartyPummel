@@ -4,6 +4,12 @@
     ViewData["Title"] = "GameRoom";
 }
 
+<canvas id="pool">
+
+</canvas>
 <div onclick="join('@Model.joinCode','@Model.name')" id="joiner"></div>
+<audio id="splashAudio">
+    <source src="~/audio/splash.mp3" />
+</audio>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/gameHub.js"></script>

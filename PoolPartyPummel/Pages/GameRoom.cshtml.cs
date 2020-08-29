@@ -11,10 +11,15 @@ namespace PoolPartyPummel
     {
         public string joinCode { get; set; }
         public string name { get; set; }
-        public void OnGet(string joinCode, string name)
+        public IActionResult OnGet(string joinCode, string name)
         {
+            if(string.IsNullOrEmpty(joinCode) || string.IsNullOrEmpty(name))
+            {
+                return Redirect("Index");
+            }
             this.joinCode = joinCode;
             this.name = name;
+            return Page();
         }
     }
 }
