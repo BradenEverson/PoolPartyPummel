@@ -9,9 +9,11 @@ namespace PoolPartyPummel
 {
     public class CreateModel : PageModel
     {
-        public void OnGet()
+        [BindProperty]
+        public string name { get; set; }
+        public IActionResult OnPost()
         {
-
+            return RedirectToPage("./GameRoom", new { joinCode = Guid.NewGuid().ToString().Split('-')[0], name = this.name });
         }
     }
 }

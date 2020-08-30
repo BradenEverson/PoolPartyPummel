@@ -3,6 +3,16 @@
 @{
     ViewData["Title"] = "Create";
 }
+<div class="text-center">
+<h1>Create A Pool</h1>
+</div>
 
-<h1>Create</h1>
-
+<div id="connectToGroup">
+    <div class="input-group justify-content-md-center btn-group-sm" style="margin-top:5%">
+        <form method="post">
+            <input type="search" asp-for="name" id="username" style="width:400px" class="form-control" placeholder="Your Username" />
+            <br />
+            <button type="submit" class="btn btn-dark form-control" id="joinGame">Join!</button>
+        </form>
+    </div>
+</div>

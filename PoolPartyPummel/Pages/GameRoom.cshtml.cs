@@ -13,7 +13,7 @@ namespace PoolPartyPummel
         public string name { get; set; }
         public IActionResult OnGet(string joinCode, string name)
         {
-            if(string.IsNullOrEmpty(joinCode) || string.IsNullOrEmpty(name))
+            if(string.IsNullOrEmpty(name))
             {
                 return Redirect("Index");
             }
