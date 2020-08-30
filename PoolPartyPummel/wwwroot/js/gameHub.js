@@ -26,7 +26,7 @@ function initializeNewTube() {
 }
 function drawTube(source) {
     canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-    canvasContext.drawImage("./images/tubes/" + source, 0,0);
+    canvasContext.drawImage("../images/tubes/" + source, 0,0);
 }
 connection.on("newMessage", function (user, message) {
     document.getElementById("message").value = "";
@@ -36,6 +36,12 @@ connection.on("newMessage", function (user, message) {
     li.setAttribute("class", "list-group-item");
     li.setAttribute("style", "margin:2px");
     ul.appendChild(li);
+});
+connection.on("userLeft", function (user) {
+    count--;
+    document.getElementById("usersOnline").innerHTML = count + " users online"
+    document.getElementById("body").innerHTML = user + " just left the party!";
+    $("#alert").modal('show');
 });
 connection.start().then(function () {
     document.getElementById("send").disabled = false;
